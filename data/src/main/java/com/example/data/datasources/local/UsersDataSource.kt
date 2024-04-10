@@ -7,6 +7,6 @@ interface UsersDataSource {
 
     fun insertUser(user: UserEntity)
 
-    fun getUser(username: String, password: String): Flow<UserEntity>
+    fun getUser(username: String, password: String): UserEntity?
 
 }

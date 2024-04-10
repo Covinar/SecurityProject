@@ -13,6 +13,6 @@ interface Dao {
     fun insertUser(user: UserEntity)
 
     @Query("SELECT * FROM users WHERE username = :username AND password = :password LIMIT 1")
-    fun getUser(username: String, password: String): Flow<UserEntity>
+    fun getUser(username: String, password: String): UserEntity?
 
 }

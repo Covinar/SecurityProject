@@ -12,7 +12,7 @@ class UsersDataSourceImpl(
         dao.insertUser(user)
     }
 
-    override fun getUser(username: String, password: String): Flow<UserEntity> {
+    override fun getUser(username: String, password: String): UserEntity? {
         return dao.getUser(username, password)
     }
 
