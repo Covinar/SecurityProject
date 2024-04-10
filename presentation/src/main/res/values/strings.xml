@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SecurityProject</string>
+    <string name="username">Username</string>
+    <string name="sing_in">Sing in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="password">Password</string>
+    <string name="registration">Registration</string>
+    <string name="hello">Hello!</string>
+</resources>
