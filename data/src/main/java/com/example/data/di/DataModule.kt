@@ -1,6 +1,7 @@
 package com.example.data.di
 
 import android.content.Context
+import com.example.data.common.AlgorithmHoffman
 import com.example.data.common.MD5Encrypt
 import com.example.data.datasources.local.UsersDataSource
 import com.example.data.datasources.local.UsersDataSourceImpl
@@ -33,12 +34,16 @@ object DataModule {
 
     @Provides
     @Singleton
-    fun provideAuthGateway(usersDataSource: UsersDataSource, mD5Encrypt: MD5Encrypt): AuthGateway {
-        return AuthGatewayImpl(usersDataSource, mD5Encrypt)
+    fun provideAuthGateway(usersDataSource: UsersDataSource, mD5Encrypt: MD5Encrypt, hoffman: AlgorithmHoffman): AuthGateway {
+        return AuthGatewayImpl(usersDataSource, mD5Encrypt, hoffman)
     }
 
     @Provides
     @Singleton
     fun provideMD5Encrypt() = MD5Encrypt()
+
+    @Provides
+    @Singleton
+    fun provideAlgorithmHoffman() = AlgorithmHoffman()
 
 }
